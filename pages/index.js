@@ -1,6 +1,8 @@
 import Head from "next/head"
 import Navbar from "../components/Navbar"
 import UpperSection from "../components/UpperSection"
+import ServicesSection from "../components/ServicesSection"
+import AgentsSection from "../components/AgentsSection"
 
 const Home = () => {
   return (
@@ -11,21 +13,18 @@ const Home = () => {
       </Head>
 
       {/* Landing (upper) section */}
-      <div className='bg-gradient-to-r from-[#090a4c] to-[#052b67] pb-5 font-mukta'>
-        <Navbar />
-        <UpperSection />
+      <div className='bg-gradient-to-r from-gray-50 to-gray-100 pb-5 font-mukta'>
+        <div className='bg-gradient-to-r from-[#090a4c] to-[#052b67]'>
+          <Navbar />
+          <UpperSection />
+        </div>
+        <ServicesSection />
+        <AgentsSection />
       </div>
 
       {/* INTERSECTION */}
-      <div className='bg-white w-2/3 h-32 -mt-16 shadow-2xl shadow-blue-200 rounded-lg mx-auto  flex justify-evenly items-center'>
-        <p>Icon</p>
-        <p>Icon</p>
-        <p>Icon</p>
-        <p>Icon</p>
-        <p>Icon</p>
-      </div>
+
       {/* Lower sections */}
-      
     </div>
   )
 }
