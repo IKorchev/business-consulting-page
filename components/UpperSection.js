@@ -1,5 +1,7 @@
 import React from "react"
-
+import Image from "next/image"
+import IMG1 from "../assets/Image_1.jpg"
+import ChartPieIcon from "@heroicons/react/solid/ChartPieIcon"
 const UpperSection = () => {
   return (
     <section className='flex flex-col items-center justify-center container mx-auto '>
@@ -18,8 +20,12 @@ const UpperSection = () => {
         </div>
         <div className='col-span-1 my-24 h-[35rem] relative'>
           <div className='absolute w-full h-full bg-gradient-to-b from-blue-900/10 to-blue-900 ml-8 mt-8 '></div>
-          <div className='absolute w-full h-full bg-blue-100 rounded-xl'></div>
-          <div className='absolute w-32 h-20 -left-12 -bottom-10 bg-blue-800 rounded-xl'></div>
+          <div className='absolute w-full h-full rounded-xl overflow-hidden'>
+            <Image src={IMG1} layout='fill' />
+          </div>
+          <div className='absolute w-32 h-20 -left-12 -bottom-10 bg-gradient-to-r from-blue-800 to-blue-300 rounded-xl grid place-items-center'>
+            <ChartPieIcon color='#ff22f2' className='h-16 w-16' />
+          </div>
         </div>
       </div>
       <div className='bg-white w-2/3 h-32 -mb-16 shadow-2xl shadow-blue-200 rounded-lg mx-auto  flex justify-evenly items-center'>

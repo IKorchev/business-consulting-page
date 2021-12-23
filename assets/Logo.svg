@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="165.995" height="73.743" viewBox="0 0 165.995 73.743">
+  <g id="Logo" transform="translate(-170 -271.267)">
+    <g id="Group_2" data-name="Group 2" transform="translate(170 271.267)">
+      <path id="Path_2" data-name="Path 2" d="M9.423,3.962,44.177,0,84.525,7.381,122.412,0l34.16,3.962a9.423,9.423,0,0,1,9.423,9.423V53.253a9.423,9.423,0,0,1-9.423,9.423H9.423A9.423,9.423,0,0,1,0,53.253V13.385A9.423,9.423,0,0,1,9.423,3.962Z" transform="translate(165.995 73.743) rotate(180)" fill="#14265a"/>
+      <path id="Path_1" data-name="Path 1" d="M9.423-1.5,44.177-5.466,84.525,1.915l37.887-7.381L156.572-1.5a9.423,9.423,0,0,1,9.423,9.423V47.787a9.423,9.423,0,0,1-9.423,9.423H9.423A9.423,9.423,0,0,1,0,47.787V7.919A9.423,9.423,0,0,1,9.423-1.5Z" transform="translate(0 5.466)" fill="#14265a"/>
+    </g>
+    <g id="Group_1" data-name="Group 1" transform="translate(202.619 295.095)">
+      <text id="BConsult" transform="translate(0.381 22.905)" fill="#ff87f3" font-size="22" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">BConsult</tspan></text>
+      <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="37.5" cy="2.5" rx="37.5" ry="2.5" transform="translate(13.381 -0.095)" fill="#ff87f3"/>
+    </g>
+  </g>
+</svg>

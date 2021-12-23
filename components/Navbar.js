@@ -1,10 +1,13 @@
 import React from "react"
-
+import Logo from "../assets/Logo.svg"
+import Image from "next/image"
 const Navbar = () => {
   return (
-    <header className='container pt-10 mx-auto'>
+    <header className='container mx-auto'>
       <nav className='flex justify-between items-center bg-none text-white px-20'>
-        <a className='text-4xl'>Logo</a>
+        <a className='text-4xl relative h-24 w-48 cursor-pointer'>
+          <Image src={Logo} layout='fill' />
+        </a>
         <div className='text-stone-300 text-xl'>
           <a className='mx-2  cursor-pointer text-white'>Home</a>
           <a className='mx-2 cursor-pointer'>Services &#8681;</a>

@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar"
 import UpperSection from "../components/UpperSection"
 import ServicesSection from "../components/ServicesSection"
 import AgentsSection from "../components/AgentsSection"
+import TestimonialsSection from "../components/TestimonialsSection"
+import Footer from "../components/Footer"
 
 const Home = () => {
   return (
@@ -20,6 +22,8 @@ const Home = () => {
         </div>
         <ServicesSection />
         <AgentsSection />
+        <TestimonialsSection />
+        <Footer />
       </div>
 
       {/* INTERSECTION */}
