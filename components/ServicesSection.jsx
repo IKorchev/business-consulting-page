@@ -1,8 +1,28 @@
 import React from "react"
 import ServicesCard from "./ServicesCard"
+
+import Image1 from "../assets/Business Plan.jpg"
+import Image2 from "../assets/Whiteboard.jpg"
+import Image3 from "../assets/Scale.jpg"
+const content = [
+  {
+    image: Image1,
+    title: "Digital Marketing",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus doloremque facere quisquam harum magnam assumenda voluptatibus. Aperiam rem nulla quaerat quibusdam delectus minima praesentium est vitae quam, sapiente, quod vero! Asperiores corrupti ab optio dolorum laudantium neque doloribus ex?",
+  },
+  {
+    image: Image2,
+    title: "Business Plans",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus doloremque facere quisquam harum magnam assumenda voluptatibus. Aperiam rem nulla quaerat quibusdam delectus minima praesentium est vitae quam, sapiente, quod vero! Asperiores corrupti ab optio dolorum laudantium neque doloribus ex?",
+  },
+  {
+    image: Image3,
+    title: "Helping you scale",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus doloremque facere quisquam harum magnam assumenda voluptatibus. Aperiam rem nulla quaerat quibusdam delectus minima praesentium est vitae quam, sapiente, quod vero! Asperiores corrupti ab optio dolorum laudantium neque doloribus ex?",
+  },
+]
+
 const ServicesSection = () => {
-  const images = [1, 2, 3]
-  const icons = [1, 2, 3, 4]
   return (
     <section className='container mx-auto py-12'>
       <header className='w-1/2 mx-auto my-32'>
@@ -14,9 +34,9 @@ const ServicesSection = () => {
           you'll fit right in here.
         </p>
       </header>
-      <div className='mx-auto'>
-        {images.map((el) => (
-          <ServicesCard />
+      <div className='mx-auto  flex flex-col gap-4'>
+        {content.map(({ title, image, text }) => (
+          <ServicesCard image={image} title={title} text={text} />
         ))}
       </div>
       <div className='mx-auto flex justify-center'>

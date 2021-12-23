@@ -1,10 +1,17 @@
 import React from "react"
 import Logo from "../assets/Logo.svg"
 import Image from "next/image"
+import { FaInstagram, FaFacebook, FaLinkedin, FaTiktok } from "react-icons/fa"
+const links = [
+  { icon: <FaTiktok />, to: "https://tiktok.com/" },
+  { icon: <FaInstagram />, to: "https://instagram.com/" },
+  { icon: <FaFacebook />, to: "https://facebook.com/" },
+  { icon: <FaLinkedin />, to: "https://linkedin.com/" },
+]
 const Footer = () => {
   return (
     <footer className='mt-48 bg-blue-900 flex flex-col items-center'>
-      <div className='h-48 w-full max-w-[65rem] bg-blue-400 shadow-lg shadow-blue-300/30 rounded-2xl px-12 -mt-24 grid grid-cols-2 gap-10 place-items-center'>
+      <div className='register-wrapper h-48 w-full max-w-[65rem] shadow-lg shadow-blue-300/30 rounded-2xl px-12 -mt-24 grid grid-cols-2 gap-10 place-items-center'>
         <h1 className='text-white font-black text-4xl col-span-1 px-7 leading-tight '>
           Register for our mailing list if You'd like to{" "}
           <span className='text-pink-300'> know more</span>
@@ -67,16 +74,12 @@ const Footer = () => {
         </div>
         <div className='text-white flex flex-col'>
           <h2 className='text-3xl font-black'>Socials</h2>
-          <div className='flex space-x-5'>
-            <a
-              href=''
-              className='text-lg font-semibold mt-5 h-10 w-10 bg-white rounded-full'></a>
-            <a
-              href=''
-              className='text-lg font-semibold mt-5 h-10 w-10 bg-white rounded-full'></a>
-            <a
-              href=''
-              className='text-lg font-semibold mt-5 h-10 w-10 bg-white rounded-full'></a>
+          <div className='flex space-x-5 mt-5'>
+            {links.map((el) => (
+              <a className='text-2xl' target='_blank' rel='noreferrer' href={el.to}>
+                {el.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>

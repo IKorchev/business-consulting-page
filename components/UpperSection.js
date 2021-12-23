@@ -2,6 +2,11 @@ import React from "react"
 import Image from "next/image"
 import IMG1 from "../assets/Image_1.jpg"
 import ChartPieIcon from "@heroicons/react/solid/ChartPieIcon"
+import Icon1 from "../assets/shopify-logo-2018.svg"
+import Icon2 from "../assets/netlink.svg"
+import Icon3 from "../assets/ibm-business-partner.svg"
+import Icon4 from "../assets/eu-business-school-01.svg"
+const icons = [Icon1, Icon2, Icon3, Icon4]
 const UpperSection = () => {
   return (
     <section className='flex flex-col items-center justify-center container mx-auto '>
@@ -23,17 +28,19 @@ const UpperSection = () => {
           <div className='absolute w-full h-full rounded-xl overflow-hidden'>
             <Image src={IMG1} layout='fill' />
           </div>
-          <div className='absolute w-32 h-20 -left-12 -bottom-10 bg-gradient-to-r from-blue-800 to-blue-300 rounded-xl grid place-items-center'>
-            <ChartPieIcon color='#ff22f2' className='h-16 w-16' />
+          <div className='absolute w-32 h-20 -left-12 -bottom-10 bg-gradient-to-r from-blue-800 to-blue-600 rounded-xl grid place-items-center'>
+            <ChartPieIcon color='#ff55ff' className='h-16 w-16' />
           </div>
         </div>
       </div>
       <div className='bg-white w-2/3 h-32 -mb-16 shadow-2xl shadow-blue-200 rounded-lg mx-auto  flex justify-evenly items-center'>
-        <p>Icon</p>
-        <p>Icon</p>
-        <p>Icon</p>
-        <p>Icon</p>
-        <p>Icon</p>
+        {icons.map((el) => {
+          return (
+            <div className='h-32 w-32 relative'>
+              <Image src={el} layout='fill' />
+            </div>
+          )
+        })}
       </div>
     </section>
   )

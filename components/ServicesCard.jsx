@@ -1,26 +1,35 @@
 import React from "react"
+import Icon1 from "../assets/ihop-restaurant-logo.svg"
+import Icon2 from "../assets/emci-1.svg"
+import Icon3 from "../assets/honeygrow.svg"
+import Icon4 from "../assets/ruby-tuesday-1.svg"
+import Icon5 from "../assets/dodge-12.svg"
+import Image from "next/image"
 
-const ServicesCard = () => {
+const icons = [Icon1, Icon2, Icon3, Icon4, Icon5]
+const ServicesCard = ({ text, image, title }) => {
   return (
-    <div className='flex even:flex-row-reverse justify-evenly my-32'>
+    <div className='flex even:flex-row-reverse my-16 shadow-lg shadow-blue-900/10 mx-16 border'>
       <div className='w-full'>
-        <div className='w-3/4 h-96  rounded-lg bg-gray-900'></div>
+        <div className='h-full relative rounded-lg '>
+          <Image src={image} layout='fill' objectFit='cover' />
+        </div>
       </div>
       <div className='w-full self-center'>
-        <div className="w-3/4">
-          <h1 className='text-3xl font-semibold'>FSA Applications</h1>
-          <p className='mt-5'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dolorem, esse
-            tempora sit quia incidunt temporibus corporis quas dicta, aliquam antium
-            soluta quaerat, quos quis temporibus possimus velit ipsa!
-          </p>
+        <div className='p-12'>
+          <h1 className='text-3xl font-semibold'>{title}</h1>
+          <p className='mt-5'>{text}</p>
           <p className='font-semibold text-lg text-blue-900 underline mt-5'>As used in</p>
-          <div className='flex mt-5'>
-            <div className='bg-blue-900 h-12 w-24 mr-2'></div>
-            <div className='bg-blue-900 h-12 w-24 mx-2'></div>
-            <div className='bg-blue-900 h-12 w-24 mx-2'></div>
-            <div className='bg-blue-900 h-12 w-24 mx-2'></div>
-            <div className=' h-12 w-24 mx-2 flex items-center text-2xl'>+150</div>
+          <div className='flex mt-5 space-x-5  items-center justify-center'>
+            {icons.map((el) => {
+              return (
+                <div className='h-12 w-24 relative'>
+                  <Image src={el} layout='fill' />
+                </div>
+              )
+            })}
+
+            <div className=' h-12 w-24 mx-2 flex items-center text-2xl'>+50</div>
           </div>
           <button className='mt-12 border-2 px-5 py-2 rounded-full border-pink-500 text-xl shadow-lg shadow-pink-500/20 font-semibold'>
             Read more
